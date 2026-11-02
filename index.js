@@ -2,7 +2,7 @@ import express from "express";
 import   "dotenv/config";
 import authRouter from "./routes/auth.js";
 import postRouter from "./routes/posts.js";
-import { connectToDatabase } from "./config/db.js";
+import { connectToDatabase } from "./db/config.js";
 
 
 const app = express();

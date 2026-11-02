@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 import "dotenv/config";
 
 
-const uri = process.env.Mongo_URI || "uri";
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri); //ПРОВОДНИК К БАЗЕ ДАННЫ
 
 let dbConnection = null;
@@ -26,7 +26,7 @@ function getDb(){
     }
     return dbConnection;
 }
-
+connectToDatabase();
 
 export { connectToDatabase, getDb };
 
